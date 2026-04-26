@@ -118,15 +118,18 @@ https://kudaniii.github.io/allyoucaneat/
 
 ---
 
-## 📸 Preview (Opsional)
+## 📸 Preview 
 
-Tambahkan screenshot di sini:
+screenshot di sini:
 
 ```
 preview/home.png
 preview/quiz.png
 ```
-
+```Atau ini
+![Home](preview/home.png)
+![Quiz](preview/quiz.png)
+```
 ---
 
 ## 🎯 Tujuan Project
