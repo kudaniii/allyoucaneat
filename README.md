@@ -126,10 +126,10 @@ screenshot di sini:
 preview/home.png
 preview/quiz.png
 ```
-```Atau ini
+Atau ini
 ![Home](preview/home.png)
 ![Quiz](preview/quiz.png)
-```
+
 ---
 
 ## 🎯 Tujuan Project
