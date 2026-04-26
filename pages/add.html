@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Tambah Makanan</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-green-400 to-blue-400 min-h-screen flex items-center justify-center">
+
+<div class="bg-white p-6 rounded-xl shadow w-80">
+  <h1 class="text-xl font-bold mb-4 text-center">➕ Tambah Makanan</h1>
+
+  <input id="name" placeholder="Nama makanan" 
+    class="w-full mb-2 p-2 border rounded">
+
+  <input id="img" placeholder="Link gambar (URL)" 
+    class="w-full mb-2 p-2 border rounded">
+
+  <textarea id="desc" placeholder="Deskripsi" 
+    class="w-full mb-2 p-2 border rounded"></textarea>
+
+  <button onclick="saveFood()" 
+    class="bg-green-500 text-white w-full p-2 rounded hover:scale-105 transition">
+    Simpan
+  </button>
+
+  <a href="../index.html" 
+    class="block text-center mt-3 text-blue-600">
+    ⬅ Kembali
+  </a>
+</div>
+
+<script>
+function saveFood() {
+  const name = document.getElementById("name").value;
+  const img = document.getElementById("img").value;
+  const desc = document.getElementById("desc").value;
+
+  if (!name || !img || !desc) {
+    alert("Isi semua data dulu!");
+    return;
+  }
+
+  const newFood = { name, img, desc };
+
+  let foods = JSON.parse(localStorage.getItem("foods")) || [];
+  foods.push(newFood);
+
+  localStorage.setItem("foods", JSON.stringify(foods));
+
+  alert("Berhasil ditambahkan!");
+  window.location.href = "../index.html";
+}
+</script>
+
+</body>
+</html>
